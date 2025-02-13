@@ -73,7 +73,20 @@ void main() {
 ```
 - Dynamic Type
 ```
+void main() {
+  // ตัวแปรแบบ dynamic สามารถเปลี่ยนประเภทของค่าได้
+  dynamic variable = "Hello";
+  print("Dynamic (ก่อนเปลี่ยนค่า): $variable (${variable.runtimeType})");
 
+  variable = 123; // เปลี่ยนจาก String เป็น int
+  print("Dynamic (หลังเปลี่ยนค่า): $variable (${variable.runtimeType})");
+
+  // ตัวแปรแบบ var (กำหนดค่าตอนประกาศ)
+  var fixedVariable = "Dart";
+  print("Var (ก่อนเปลี่ยนค่า): $fixedVariable (${fixedVariable.runtimeType})");
+
+  // fixedVariable = 456; // ❌ จะเกิด Error เพราะ var ไม่สามารถเปลี่ยนประเภทได้
+}
 ```
 - Constant & Final
 - กฎการตั้งชื่อตัวแปร
